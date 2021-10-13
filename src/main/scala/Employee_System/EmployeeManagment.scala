@@ -9,62 +9,63 @@ trait EmployeeDetails {
   def attendance(empid:String, st: String, et: String): String
 }
 
-class Consultant(id:String, fn: String, ln:String, sl:Int) extends EmployeeDetails {
+class Consultant(empID:String, fName: String, lName:String, income:Int) extends EmployeeDetails {
   private val prefix = "CONS"
-  val empid: String = prefix + id
-  def firstName: String = fn
-  def lastName: String = ln
-  def salary: Int = sl
+  val empid: String = prefix + empID
+  def firstName: String = fName
+
+  def lastName: String = lName
+  def salary: Int = income
   var fullName: String = firstName +" "+ lastName
   def attendance(e:String): String = {
-    "Employee-ID "+empid+" \nIn Time- 09:45 AM"+"\nOut Time- 06:45 PM"+ "\nEmployee Name" + fullName + "\nSalary "+ salary
+    "Employee-ID "+empid+" In Time- 09:45 AM"+"Out Time- 06:45 PM"+ "Employee Name" + fullName + "Salary "+ salary
   }
   def attendance(emid: String, st: String, et: String): String = {
-    "Employee-ID "+empid + " \nIn time:  " + st + " \nOut Time " + et+ "\n Employee Name" + fullName + "\nSalary "+salary
+    "Employee-ID "+empid + " In time:  " + st + "Out Time " + et+ "Employee Name" + fullName + "Salary "+salary
   }
 }
 
-class Manager(id:String, fn: String, ln:String, sl:Int) extends EmployeeDetails {
+class Manager(empId:String, fName: String, lName:String, income:Int) extends EmployeeDetails {
   private val prefix = "MANA"
-  val empid: String = prefix + id
-  def firstName: String = fn
-  def lastName: String = ln
-  def salary: Int = sl
+  val empid: String = prefix + empId
+  def firstName: String = fName
+  def lastName: String = lName
+  def salary: Int = income
   var fullName: String = firstName +" "+ lastName
   def attendance(e:String): String = {
-    "Employee-ID "+empid+" \nIn Time- 09:45 AM"+"\nOut Time- 06:45 PM"+ "\nEmployee Name" + fullName + "\nSalary "+ salary
+    "Employee-ID "+empid+"In Time- 09:45 AM"+"Out Time- 06:45 PM"+ "Employee Name" + fullName + "Salary "+ salary
   }
   def attendance(emid: String, st: String, et: String): String = {
-    "Employee-ID "+empid + " \nIn time:  " + st + " \nOut Time " + et+ "\n Employee Name" + fullName + "\nSalary "+salary
+    "Employee-ID "+empid + "In time:  " + st + " Out Time " + et+ " Employee Name" + fullName + "Salary "+salary
   }
 }
 
-class SrManager(id:String, fn: String, ln:String, sl:Int) extends EmployeeDetails {
+class SrManager(empID:String, fName: String, lName:String, income:Int) extends EmployeeDetails {
   private val prefix = "SRMA"
-  val empid: String = prefix + id
-  def firstName: String = fn
-  def lastName: String = ln
-  def salary: Int = sl
+  val empid: String = prefix + empID
+  def firstName: String = fName
+  def lastName: String = lName
+  def salary: Int = income
   var fullName: String = firstName +" "+ lastName
   def attendance(e:String): String = {
-    "Employee-ID "+empid+" \nIn Time- 09:45 AM"+"\nOut Time- 06:45 PM"+ "\nEmployee Name" + fullName + "\nSalary "+ salary
+    "Employee-ID "+empid+" In Time- 09:45 AM"+"Out Time- 06:45 PM"+ "Employee Name" + fullName + "Salary "+ salary
   }
   def attendance(emid: String, st: String, et: String): String = {
-    "Employee-ID "+empid + " \nIn time:  " + st + " \nOut Time " + et+ "\n Employee Name" + fullName + "\nSalary "+salary
+    "Employee-ID "+empid + " In time:  " + st + " Out Time " + et+ "Employee Name" + fullName + "Salary "+salary
   }
 }
 
-class President(id:String, fn: String, ln:String, sl:Int) extends EmployeeDetails {
+class President(empID:String, fName: String, lName:String, income:Int) extends EmployeeDetails {
   private val prefix = "POTC"
-  val empid: String = prefix + id
-  def firstName: String = fn
-  def lastName: String = ln
-  def salary: Int = sl
+  val empid: String = prefix + empID
+  def firstName: String = fName
+  def lastName: String = lName
+  def salary: Int = income
   var fullName: String = firstName +" "+ lastName
   def attendance(e:String): String = {
-    "Employee-ID "+empid+" \nIn Time- 09:45 AM"+"\nOut Time- 06:45 PM"+ "\nEmployee Name" + fullName + "\nSalary "+ salary
+    "Employee-ID "+empid+"In Time- 09:45 AM"+"Out Time- 06:45 PM"+ "Employee Name" + fullName + "Salary "+ salary
   }
   def attendance(emid: String, st: String, et: String): String = {
-    "Employee-ID "+empid + " \nIn time:  " + st + " \nOut Time " + et+ "\n Employee Name" + fullName + "\nSalary "+salary
+    "Employee-ID "+empid + "In time:  " + st + "Out Time " + et+ "Employee Name" + fullName + "Salary "+salary
   }
 }
